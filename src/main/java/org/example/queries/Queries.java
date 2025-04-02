@@ -56,7 +56,7 @@ public class Queries {
     }
 
     public static void importTableContabeis(Connection connection, int ano) throws SQLException {
-        String sql = "INSERT INTO demonstracoes_contabeis_"+2025+" (data,reg_ans,cd_conta_contabil,descricao,vl_saldo_inicial,vl_saldo_final) " +
+        String sql = "INSERT INTO demonstracoes_contabeis_"+ano+" (data,reg_ans,cd_conta_contabil,descricao,vl_saldo_inicial,vl_saldo_final) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         importarCsvContabeis(preparedStatement, ano);
